@@ -125,8 +125,8 @@ static void handle_status_update(void * data) {
     [NSColor setIgnoresAlpha:NO];
 
     // initial colors
-    elapsed = [[NSColor colorWithCalibratedRed:0.3 green:0.3 blue:0.9 alpha:0.95] retain];
-    taking = [[NSColor colorWithCalibratedRed:0.3 green:0.9 blue:0.3 alpha:0.90] retain];
+    elapsed = [[NSColor colorWithCalibratedRed:0.77 green:0 blue:0 alpha:0.9] retain];
+    taking = [[NSColor colorWithCalibratedRed:0.04 green:0.46 blue:0.04 alpha:0.9] retain];
     background = [NSColor colorWithCalibratedRed:0.9 green:0.9 blue:0.9 alpha:0.7];
 
     //initial values
