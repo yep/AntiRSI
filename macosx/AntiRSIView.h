@@ -6,6 +6,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AntiRSIView   : NSView   { } @end
-@interface AntiRSIButton : NSButton { } @end
+@interface
+AntiRSIView: NSVisualEffectView {}
+@end
+
+@interface
+AntiRSIButton: NSButton {}
+@end
 

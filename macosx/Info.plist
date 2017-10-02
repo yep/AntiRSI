@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>AntiRSI.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.onnlucky.antirsi</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -18,8 +18,10 @@
 	<string>ONNE</string>
 	<key>CFBundleVersion</key>
 	<string>${APPLICATION_VERSION}</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

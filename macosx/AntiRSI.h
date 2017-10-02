@@ -9,9 +9,6 @@
 
 #include "../antirsi-core/antirsi-core.h"
 
-#define sLatestVersionURL @"http://tech.inhelsinki.nl/antirsi/antirsi_version.txt"
-#define sURL @"http://tech.inhelsinki.nl/antirsi/"
-
 #define sMicroPause @"Micro Pause"
 #define sWorkBreak  @"Work Break"
 
@@ -63,12 +60,6 @@
 - (void)setSample_interval:(NSString *)s;
 - (void)setDraw_dock_image:(BOOL)b;
 - (void)setBackground:(NSColor *)c;
-
-// goto website button
-- (IBAction)gotoWebsite:(id)sender;
-
-// check updates
-- (IBAction)checkForUpdate:(id)sender;
 
 // postpone button
 - (IBAction)postpone:(id)sender;

@@ -94,7 +94,7 @@ static void handle_status_update(void * data) {
     background=[c retain];
 
     // make new darkbackground color
-    float r,g,b,a;
+    CGFloat r,g,b,a;
     [background getRed:&r green:&g blue:&b alpha:&a];
     [darkbackground autorelease];
     darkbackground=[[NSColor colorWithCalibratedRed:r*0.35 green:g*0.35 blue:b*0.35 alpha:a+0.2] retain];
@@ -353,45 +353,10 @@ static void handle_status_update(void * data) {
 
     // nice hours, minutes ...
     if (minutes > 60) {
-        [next_break setStringValue:[NSString stringWithFormat:@"next break in %d:%02d hours",
+        [next_break setStringValue:[NSString stringWithFormat:@"Next break in %d:%02d hours",
             minutes / 60, minutes % 60]];
     } else {
-        [next_break setStringValue:[NSString stringWithFormat:@"next break in %d minutes", minutes]];
-    }
-}
-
-// goto website
-- (IBAction)gotoWebsite:(id)sender
-{
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:sURL]];
-}
-
-// check for update
-- (IBAction)checkForUpdate:(id)sender
-{
-    NSString *latest_version = [NSString stringWithContentsOfURL: [NSURL URLWithString:sLatestVersionURL]];
-    if (latest_version == Nil) latest_version = @"";
-    
-    latest_version = [latest_version stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-
-    if ([latest_version length] == 0) {
-        NSRunInformationalAlertPanel(
-            @"Unable to Determine",
-            @"Unable to determine the latest AntiRSI version number.",
-            @"Ok", nil, nil);
-    } else if ([latest_version compare:sVersion] == NSOrderedDescending) {
-        int r = NSRunInformationalAlertPanel(
-            @"New Version",
-            [NSString stringWithFormat:@"A new version (%@) of AntiRSI is available; would you like to go to the website now?", latest_version],
-            @"Goto Website", @"Cancel", nil);
-        if (r == NSOKButton) {
-            [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:sURL]];
-        }
-    } else {
-        NSRunInformationalAlertPanel(
-            @"No Update Available",
-            @"This is the latest version of AntiRSI.",
-            @"OK", nil, nil);
+        [next_break setStringValue:[NSString stringWithFormat:@"Next break in %d minutes", minutes]];
     }
 }
 
