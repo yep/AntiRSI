@@ -168,10 +168,10 @@ static void handle_status_update(void * data) {
 
     // create initial values
     NSMutableDictionary* initial = [NSMutableDictionary dictionaryWithCapacity:10];
-    [initial setObject:[NSNumber numberWithFloat:4] forKey:@"micro_pause_period"];
-    [initial setObject:[NSNumber numberWithFloat:13] forKey:@"micro_pause_duration"];
-    [initial setObject:[NSNumber numberWithFloat:50] forKey:@"work_break_period"];
-    [initial setObject:[NSNumber numberWithFloat:8] forKey:@"work_break_duration"];
+    [initial setObject:[NSNumber numberWithFloat:10] forKey:@"micro_pause_period"];
+    [initial setObject:[NSNumber numberWithFloat:10] forKey:@"micro_pause_duration"];
+    [initial setObject:[NSNumber numberWithFloat:54] forKey:@"work_break_period"];
+    [initial setObject:[NSNumber numberWithFloat:5] forKey:@"work_break_duration"];
     [initial setObject:@"Smooth" forKey:@"sample_interval"];
     [initial setObject:[NSNumber numberWithBool:YES] forKey:@"draw_dock_image"];
     [initial setObject:[NSNumber numberWithBool:NO] forKey:@"lock_focus"];

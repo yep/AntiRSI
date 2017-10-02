@@ -17,4 +17,4 @@ Pre-built binaries are available at GithHub's [Releases](https://github.com/yep/
 
 ## License
 
-GPL, see `LICENSE` and `AUTHORS` files.
+GPL, see `COPYING` and `AUTHORS` files.
