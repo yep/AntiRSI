@@ -1,5 +1,5 @@
 /*
- * author: Onne Gorter <o.gorter@gmail.com>
+ * author: Onne Gorter <o.gorter@gmail.com>, Jahn Bertsch <yep171@yahoo.com>
  * package: antirsi-macosx
  * license: GPL
  */
@@ -13,4 +13,3 @@ AntiRSIView: NSVisualEffectView {}
 @interface
 AntiRSIButton: NSButton {}
 @end
-

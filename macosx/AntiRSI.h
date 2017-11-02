@@ -1,5 +1,5 @@
 /*
- * author: Onne Gorter <o.gorter@gmail.com>
+ * author: Onne Gorter <o.gorter@gmail.com>, Jahn Bertsch <yep171@yahoo.com>
  * package: antirsi-macosx
  * license: GPL
  */
@@ -22,29 +22,29 @@
     IBOutlet NSTextField *time;
     IBOutlet NSTextField *next_break;
     IBOutlet NSTextField *version;
-
+    
     IBOutlet NSMenuItem *menuBreakNow;
     IBOutlet NSMenuItem *dockBreakNow;
     IBOutlet NSMenuItem *menuPostpone;
     IBOutlet NSMenuItem *dockPostpone;
-
+    
     // dock icon image
     NSImage* dock_image;
     NSImage* original_dock_image;
-
+    
     // window to display the views in
     NSWindow *main_window;
-
+    
     // timer that ticks every second to update
     NSTimer *mtimer;
-
+    
     double sample_interval;
-
+    
     // verious other options
     bool lock_focus;
     bool draw_dock_image;
     bool draw_dock_image_q;
-
+    
     // various colors
     NSColor* taking;
     NSColor* elapsed;
@@ -52,14 +52,13 @@
     NSColor* darkbackground;
     
     NSString *sVersion;
-
+    
     ai_core * core;
 }
 
 //bindings
 - (void)setSample_interval:(NSString *)s;
 - (void)setDraw_dock_image:(BOOL)b;
-- (void)setBackground:(NSColor *)c;
 
 // postpone button
 - (IBAction)postpone:(id)sender;
